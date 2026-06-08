@@ -4,7 +4,7 @@ An interactive data piece on how Cyprus stores, drains and pays for its water:
 four decades of reservoir history, the seasonal fill-and-empty cycle, monthly
 inflow, every dam's live level, the restriction record, and what it now costs to
 keep the taps running when the rain doesn't come.
-🔗 Live: [https://YOUR-VERCEL-URL.vercel.app](https://cyprus-water-analysis.vercel.app/)  ·  Read the full piece, interactive charts and all.
+🔗 Live: [https://cyprus-water-analysis.vercel.app](https://cyprus-water-analysis.vercel.app/)  ·  Read the full piece, interactive charts and all.
 
 Static React site (Vite). No backend. Data is a single JSON snapshot that a
 weekly GitHub Action regenerates from the live [fragmata.info](https://fragmata.info)
