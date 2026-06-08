@@ -1,0 +1,20 @@
+{
+  "source": "Cyprus tourist arrivals, CYSTAT monthly press releases (2024).",
+  "note": "Sep-Dec are exact CYSTAT figures; the annual total (4,040,200) and Jan-Sep cumulative (3,268,090) are exact. Jan-Aug monthly splits are estimates constrained to those official totals and to the documented Jul/Aug peak & Jan trough, pending the authoritative pull via scripts/refresh-annual.mjs (Eurostat tour_occ_arm / CYSTAT-DB).",
+  "year": 2024,
+  "annual": 4040200,
+  "months": [
+    { "m": "Jan", "n": 1, "arrivals": 95000, "exact": false },
+    { "m": "Feb", "n": 2, "arrivals": 100000, "exact": false },
+    { "m": "Mar", "n": 3, "arrivals": 195000, "exact": false },
+    { "m": "Apr", "n": 4, "arrivals": 334000, "exact": false },
+    { "m": "May", "n": 5, "arrivals": 445000, "exact": false },
+    { "m": "Jun", "n": 6, "arrivals": 490000, "exact": false },
+    { "m": "Jul", "n": 7, "arrivals": 545000, "exact": false },
+    { "m": "Aug", "n": 8, "arrivals": 554627, "exact": false },
+    { "m": "Sep", "n": 9, "arrivals": 509463, "exact": true },
+    { "m": "Oct", "n": 10, "arrivals": 459106, "exact": true },
+    { "m": "Nov", "n": 11, "arrivals": 179941, "exact": true },
+    { "m": "Dec", "n": 12, "arrivals": 133063, "exact": true }
+  ]
+}
