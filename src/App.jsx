@@ -591,7 +591,7 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
         .root{
-          --bg:#f3ead9; --paper:#fbf6ec; --ink:#241d17; --muted:#6f6253;
+          --bg:#f6f0e3; --paper:#fbf6ec; --ink:#241d17; --muted:#5a4d3c;
           --grid:#e3d6bf; --faint:#bcae97;
           --c-crit:#7a2410; --c-low:#c0492b; --c-mod:#c9912f; --c-good:#3f93a0; --c-full:#0f4a52;
           --c-water:#1f7d88; --c-water-deep:#0f4a52; --c-pin:#b5326b;
@@ -599,8 +599,8 @@ export default function App() {
           background:var(--bg); color:var(--ink);
           font-family:'Newsreader',Georgia,serif; line-height:1.6;
           padding:0; min-height:100%;
-          background-image:radial-gradient(circle at 12% -5%, rgba(63,147,160,.10), transparent 40%),
-                           radial-gradient(circle at 95% 8%, rgba(192,73,43,.08), transparent 38%);
+          background-image:radial-gradient(circle at 12% -5%, rgba(63,147,160,.06), transparent 40%),
+                           radial-gradient(circle at 95% 8%, rgba(192,73,43,.05), transparent 38%);
         }
         .wrap{max-width:880px;margin:0 auto;padding:46px 28px 80px;}
         .kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--c-low);margin:0 0 14px;}
@@ -610,6 +610,8 @@ export default function App() {
         .stats{display:flex;flex-wrap:wrap;gap:26px;padding:22px 0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);margin-bottom:46px;}
         .stat .v{font-family:'Fraunces',serif;font-weight:800;font-size:40px;line-height:1;}
         .stat .l{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+        .units-glossary{flex-basis:100%;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.55;color:var(--muted);
+          border-left:2px solid var(--faint);padding:0 0 0 12px;margin:10px 0 0;}
         h2{font-family:'Fraunces',serif;font-weight:700;font-size:27px;letter-spacing:-.01em;margin:54px 0 6px;}
         .sub{color:var(--muted);font-size:15.5px;margin:0 0 20px;max-width:660px;}
         p.body{font-size:17px;max-width:660px;}
@@ -698,6 +700,10 @@ export default function App() {
           <div className="stat"><div className="v" style={{ color: "var(--c-water)" }}>+{(pct - lyPct).toFixed(0)}pp</div><div className="l">vs a year ago ({lyPct.toFixed(0)}%)</div></div>
           <div className="stat"><div className="v">112</div><div className="l">MCM inflow 25/26 · best since 1987</div></div>
           <div className="stat"><div className="v">{s.totalCapacity.toFixed(0)}</div><div className="l">MCM total capacity · 21 major dams (of ~108)</div></div>
+          <p className="units-glossary">
+            MCM = million cubic metres (one MCM ≈ 400 Olympic pools) · pp = percentage points (the gap between two
+            percentages — here, this year's fill versus last year's).
+          </p>
         </div>
 
         <h2>How the dams fill across a year</h2>
