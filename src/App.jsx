@@ -606,6 +606,9 @@ export default function App() {
         .kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--c-low);margin:0 0 14px;}
         h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(38px,7vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0 0 18px;}
         h1 em{font-style:italic;color:var(--c-water-deep);}
+        .byline{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;color:var(--faint);margin:-12px 0 24px;}
+        .byline a{color:inherit;text-decoration:none;}
+        .byline a:hover{color:var(--c-water-deep);text-decoration:underline;}
         .lede{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 34px;}
         .stats{display:flex;flex-wrap:wrap;gap:26px;padding:22px 0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);margin-bottom:46px;}
         .stat .v{font-family:'Fraunces',serif;font-weight:800;font-size:40px;line-height:1;}
@@ -680,6 +683,9 @@ export default function App() {
         .tile .tl{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45;}
         .foot{margin-top:60px;padding-top:22px;border-top:1.5px solid var(--ink);font-size:13px;color:var(--muted);}
         .foot a{color:var(--c-water-deep);}
+        .foot-byline{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;color:var(--faint);margin-top:18px;}
+        .foot-byline a{color:inherit;text-decoration:none;}
+        .foot-byline a:hover{color:var(--c-water-deep);text-decoration:underline;}
         .reveal{opacity:0;transform:translateY(14px);animation:rv .7s ease forwards;}
         @keyframes rv{to{opacity:1;transform:none;}}
       `}</style>
@@ -687,6 +693,14 @@ export default function App() {
       <div className="wrap">
         <p className="kicker reveal">Cyprus · Water Development Department · snapshot {s.snapshotDate}</p>
         <h1 className="reveal" style={{ animationDelay: ".05s" }}>The price of low rainfall and <em>empty dams</em>.</h1>
+        <p className="byline reveal" style={{ animationDelay: ".08s" }}>
+          By{" "}
+          <a href="https://medium.com/@thomascgeorgiou" target="_blank" rel="noreferrer">Thomas Georgiou</a>
+          {" · "}
+          <a href="https://medium.com/@thomascgeorgiou" target="_blank" rel="noreferrer">Medium</a>
+          {" · "}
+          <a href="https://www.linkedin.com/in/thomascgeorgiou/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
         <p className="lede reveal" style={{ animationDelay: ".12s" }}>
           Cyprus relies heavily on its dams to provide water across the island, yet during dry periods it turns to the
           sea, where water costs up to 25 times more than rainfall use. 2026 spring's rebound is a stroke of luck inside
@@ -906,6 +920,14 @@ export default function App() {
         <div className="foot">
           <p><strong>Sources.</strong> Reservoir data: Cyprus Water Development Department, via <a href="https://fragmata.info" target="_blank" rel="noreferrer">fragmata.info</a> (open data, Vladimir Bugay); bi-monthly storage Jan 1988 → Jun 2026. Tourism, halloumi exports, GDP and fiscal figures: CYSTAT (some via Cyprus Mail reporting). Household counts (357,858; avg 2.57 persons) and district shares: CYSTAT 2021 Census of Population and Housing (government-controlled areas). Per-capita consumption (up to ~500 L/day in places against a ~120 L European average): Smart Water Magazine, Feb 2026. Produce prices (2024): Cyprus Mail and the agriculture ministry's e-kofini platform. Agriculture support: Cyprus Ministry of Agriculture and European Commission. Desalination costs and leakage: Water Development Department and the 2025 Audit Office report, via Cyprus Mail. Fix-cost commitments (€196M 2026 budget; €8M leak-reduction tranche; €230M Thaleia 2021–27 programme): Cyprus government, via Politis and Cyprus Mail. Comparative water-sector spending and investment needs: OECD / European Commission (2020) and Water Europe (2024); national leakage rates: EEA and peer-reviewed compilations; England & Wales leakage allowance: Ofwat PR24 (2024). Restriction periods are hand-compiled from press and policy reporting and are indicative, not an official register. The leakage-cost and per-household figures are derived, not official (see calculations above).</p>
           <p style={{ marginTop: 10 }}>Snapshot frozen {s.snapshotDate}. Figures are storage as a share of each reservoir's capacity (MCM = million cubic metres).</p>
+          <p className="foot-byline">
+            By{" "}
+            <a href="https://medium.com/@thomascgeorgiou" target="_blank" rel="noreferrer">Thomas Georgiou</a>
+            {" · "}
+            <a href="https://medium.com/@thomascgeorgiou" target="_blank" rel="noreferrer">Medium</a>
+            {" · "}
+            <a href="https://www.linkedin.com/in/thomascgeorgiou/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </p>
         </div>
       </div>
     </div>
